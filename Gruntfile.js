@@ -14,7 +14,9 @@ module.exports = function(grunt) {
     };
 
     var buildTo = grunt.option('buildTo');
-  var dist = buildTo ? (buildTo + '/') : 'dist/';
+    var dist = buildTo ? (buildTo + '/') : 'dist/';
+
+    var appPath = 'hsq'; //docs
 
     // Project configuration.
     grunt.initConfig({
@@ -23,11 +25,11 @@ module.exports = function(grunt) {
         // Metadata.
         meta: {
             distPath: dist,
-            doclessetsPath: 'docs/assets/',
-            docsDistPath: 'docs/dist/',
-            docsPath: 'docs/',
+            doclessetsPath: appPath +'/assets/',
+            docsDistPath: appPath +'/dist/',
+            docsPath: appPath +'/',
             jsPath: 'js/',
-            srcPath: 'less/'
+            lessPath: 'less/'
         },
 
         banner: '/*!\n' +
@@ -96,8 +98,12 @@ module.exports = function(grunt) {
 
 
         less: {
+            options: {
+                paths: ['./', '<%= meta.lessPath %>'],
+                ieCompat: false
+            },
             core: {
-                src: 'less/light7.less',
+                src: '<%= meta.lessPath %>light7.less',
                 dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
             },
             extend: {
@@ -107,6 +113,10 @@ module.exports = function(grunt) {
             docs: {
                 src: 'less/docs.less',
                 dest: '<%= meta.doclessetsPath %>css/docs.css'
+            },
+            hsq: {
+                src: '<%= meta.doclessetsPath %>css/hsq.less',
+                dest: '<%= meta.doclessetsPath %>css/hsq.css'
             },
             demos: {
                 src: 'less/demos.less',
@@ -243,12 +253,12 @@ module.exports = function(grunt) {
             }
         },
 
-        qunit: {
-            options: {
-                inject: 'js/tests/unit/phantom.js'
-            },
-            files: 'js/tests/index.html'
-        },
+        // qunit: {
+        //     options: {
+        //         inject: 'js/tests/unit/phantom.js'
+        //     },
+        //     files: 'js/tests/index.html'
+        // },
 
         watch: {
             options: {
@@ -317,9 +327,16 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy']);
   grunt.registerTask('validate-html', ['jekyll']);
   grunt.registerTask('build', ['dist']);
-  grunt.registerTask('test', ['dist', 'jshint', 'qunit', 'validate-html']);
+  // grunt.registerTask('test', ['dist', 'jshint', 'qunit', 'validate-html']);
+  grunt.registerTask('test', ['dist', 'jshint', 'validate-html']);
   grunt.registerTask('server', ['dist', 'jekyll', 'connect', 'watch']);
-  grunt.registerTask('default', ['test', 'dist']);
+  if (buildTo) {
+      //CDN发布环境
+      grunt.registerTask('default', ['build-js', 'build-css', 'copy']);
+  } else {
+      //开发环境
+      grunt.registerTask('default', ['test', 'dist']);
+  }
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z

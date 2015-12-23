@@ -48,6 +48,8 @@ module.exports = function(grunt) {
               options: {
                   banner: '<%= banner %>'
               },
+              //按需要组合
+              //还需要 延迟加载图片
               src: [
                   'js/intro.js',
                   'js/device.js',

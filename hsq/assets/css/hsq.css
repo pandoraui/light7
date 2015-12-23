@@ -3,7 +3,7 @@
   padding-top: 2.2rem;
 }
 .mb10 {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 /* 详情页 */
 .page-detail .swiper-container {
@@ -41,12 +41,12 @@
   margin: 0;
 }
 .hsq-card .card-title {
-  padding: 10px;
+  padding: 0.5rem;
   height: 36px;
   border-bottom: 1px solid #E4E4E4;
 }
 .hsq-card .card-title .tit {
-  font-size: 16px;
+  font-size: 0.8rem;
   line-height: 1;
 }
 dfn.price {
@@ -74,18 +74,18 @@ dfn.price i {
   border-top: 1px solid #E4E4E4;
 }
 .group-list li {
-  min-height: 18px;
+  min-height: 0.9rem;
   margin: -1px 0 0 0;
-  line-height: 18px;
-  padding: 11px 10px;
+  line-height: 0.9rem;
+  padding: 0.5rem 0.5rem;
 }
 .detail-desc .group-list .tit {
-  font-size: 16px;
-  line-height: 18px;
-  margin: 0 0 10px 0;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  margin: 0 0 0.5rem 0;
 }
 .detail-desc .price {
-  margin-right: 10px;
+  margin-right: 0.5rem;
 }
 .detail-desc del {
   color: #AEAEAE;
@@ -96,24 +96,24 @@ dfn.price i {
 }
 .hsq-card .link-more,
 .detail-desc .num {
-  font-size: 12px;
+  font-size: 0.6rem;
   color: #959595;
 }
 .card-comments .list-comments {
-  padding: 0 0 0 10px;
+  padding: 0 0 0 0.5rem;
 }
 .card-comments .list-comments li {
-  padding: 11px 10px 10px 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
 }
 .card-comments .c-info {
-  font-size: 12px;
+  font-size: 0.6rem;
   color: #959595;
   margin-bottom: 5px;
 }
 .card-comments .c-info .author,
 .card-comments .c-info .time {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0.5rem;
 }
 .card-comments img {
   display: inline-block;
@@ -133,8 +133,8 @@ dfn.price i {
   max-width: 100%;
 }
 .main-article p {
-  margin: 10px 0;
-  padding: 0 10px;
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
 }
 .down-tip {
   position: fixed;
@@ -148,7 +148,7 @@ dfn.price i {
 .down-tip .tip-bg {
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
@@ -161,7 +161,7 @@ dfn.price i {
 .down-tip p {
   position: relative;
   z-index: 2;
-  padding: 5px 10px 5px 20px;
+  padding: 5px 0.5rem 5px 20px;
 }
 .down-tip .btn {
   box-sizing: border-box;

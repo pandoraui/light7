@@ -1,6 +1,8 @@
 
+@import "../../../less/variables.less";
+
 .bar-nav ~ .content{top: 0; padding-top: 2.2rem;}
-.mb10{margin-bottom: 10px;}
+.mb10{margin-bottom: @size-10;}
 
 /* 详情页 */
 .page-detail .swiper-container {
@@ -18,47 +20,46 @@
 .swiper-pagination-bullet{background: none; border: 1px solid #fff; opacity: 1;}
 .swiper-pagination-bullet-active{background: #fff;}
 
-
-.hsq-card{background: #fff; font-size: 14px;}
+.hsq-card{background: #fff; font-size: @size-14;}
 .hsq-card p{margin: 0}
-.hsq-card .card-title {padding: 10px; height: 36px;border-bottom: 1px solid #E4E4E4;}
-.hsq-card .card-title .tit{font-size: 16px; line-height: 1;}
+.hsq-card .card-title {padding: @size-10; height: @size-36;border-bottom: 1px solid #E4E4E4;}
+.hsq-card .card-title .tit{font-size: @size-16; line-height: 1;}
 
-dfn.price{ display: inline-block; font-style: normal;font-size: 20px; color:#FF5555}
-dfn.price i{font-size: 14px;font-style: normal;}
+dfn.price{ display: inline-block; font-style: normal;font-size: @size-20; color:#FF5555}
+dfn.price i{font-size: @size-14;font-style: normal;}
 
 /*详情页*/
 .page-view-detail{background: #efefef; color: #252525;}
 .group-list{ list-style: none; margin: 0;padding: 0;}
 .solid_line,
 .group-list li{border-top: 1px solid #E4E4E4;}
-.group-list li{min-height: 18px; margin: -1px 0 0 0;line-height: 18px;padding: 11px 10px;}
+.group-list li{min-height: @size-18; margin: -1px 0 0 0;line-height: @size-18;padding: @size-10;}
 
 .detail-desc{}
-.detail-desc .group-list .tit{font-size: 16px;line-height: 18px; margin:0 0 10px 0;}
-.detail-desc .price{ margin-right: 10px;}
+.detail-desc .group-list .tit{font-size: @size-16;line-height: @size-18; margin:0 0 @size-10 0;}
+.detail-desc .price{ margin-right: @size-10;}
 .detail-desc del{color: #AEAEAE;}
 
 .gray,
 .detail-desc .label{color: #959595;}
 .hsq-card .link-more,
-.detail-desc .num{font-size: 12px;color: #959595;}
-.card-comments .list-comments{padding: 0 0 0 10px;}
-.card-comments .list-comments li{padding: 11px 10px 10px 0;}
-.card-comments .c-info{font-size: 12px;color: #959595; margin-bottom: 5px;}
+.detail-desc .num{font-size: @size-12;color: #959595;}
+.card-comments .list-comments{padding: 0 0 0 @size-10;}
+.card-comments .list-comments li{padding: @size-10 @size-10 @size-10 0;}
+.card-comments .c-info{font-size: @size-12;color: #959595; margin-bottom: @size-5;}
 .card-comments .c-info .author,
-.card-comments .c-info .time{display: inline-block; margin-right: 10px;}
-.card-comments img{display: inline-block;margin-right:5px;width: 45px; height: 45px;}
-.card-comments .imgbox{margin-top: 8px;}
+.card-comments .c-info .time{display: inline-block; margin-right: @size-10;}
+.card-comments img{display: inline-block;margin-right:@size-5;width: 4@size-5; height: 4@size-5;}
+.card-comments .imgbox{margin-top: @size-8;}
 
 .main-article {padding-bottom: 1px;}
 .main-article img{display: block; margin: 0 auto; max-width: 100%;}
-.main-article p{margin:10px 0; padding: 0 10px;}
+.main-article p{margin:@size-10 0; padding: 0 @size-10;}
 
 
-.down-tip{position: fixed;bottom: 0;left:0;width: 100%; min-height: 30px; line-height: 30px;color: #fff;}
-.down-tip .tip-bg{position: absolute; width: 100%;height: 100px; background: rgba(0,0,0,0.7); z-index: 1;}
-.down-tip img{display: inline-block;width: 32px;height: 32px; margin-right: 5px;}
-.down-tip p{position: relative; z-index: 2;padding: 5px 10px 5px 20px;}
-.down-tip .btn{box-sizing: border-box; line-height: 30px; height: 30px; color: #FFEE11; background: none; border: 1px solid #FFEE11; border-radius: 50px;}
-.down-tip .close{position: absolute; z-index: 3;left:0;top:0;display: inline-block;width: 20px; height: 20px; line-height: 1.5;padding: 0 5px 5px 0;text-align: center;color:#fff;border-bottom-right-radius: 35px;background: #000;}
+.down-tip{position: fixed;bottom: 0;left:0;width: 100%; min-height: @size-30; line-height: @size-30;color: #fff;}
+.down-tip .tip-bg{position: absolute; width: 100%;height: 100%; background: rgba(0,0,0,0.7); z-index: 1;}
+.down-tip img{display: inline-block;width: @size-32;height: @size-32; margin-right: @size-5;}
+.down-tip p{position: relative; z-index: 2;padding: @size-5 @size-10 @size-5 @size-20;}
+.down-tip .btn{box-sizing: border-box; line-height: @size-30; height: @size-30; color: #FFEE11; background: none; border: 1px solid #FFEE11; border-radius: 50px;}
+.down-tip .close{position: absolute; z-index: 3;left:0;top:0;display: inline-block;width: @size-20; height: @size-20; line-height: 1.5;padding: 0 @size-5 @size-5 0;text-align: center;color:#fff;border-bottom-right-radius: @size-35;background: #000;}
